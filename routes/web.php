@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', 'HalamanController@hal');
-Route::get('/Halaman', 'HalController@halhal');
-Route::post('/sent', 'HalController@kirim');
+use Facade\FlareClient\View;
+
+
+
+Route::get('/coba', function(){
+    return view('table');
+});
+Route::get('/data', function(){
+    return view('datatable');
+});
